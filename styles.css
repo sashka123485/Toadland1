@@ -1,0 +1,158 @@
+/* Основной стиль для тела документа */
+body {
+    background-color: #004d40; /* Тёмно-зелёный цвет фона */
+    min-height: 100vh; /* Минимальная высота — весь экран */
+    margin: 0; /* Убираем отступы по умолчанию */
+    font-family: 'Roboto', Arial, sans-serif; /* Шрифт */
+    color: #a5d6a7; /* Цвет текста */
+    display: flex; /* Flex-контейнер для всего тела */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+}
+
+/* Стили для контейнера с контентом */
+.container {
+    max-width: 1200px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование */
+    padding: 20px; /* Отступы внутри контейнера */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+/* Шапка сайта с logo.png */
+header {
+    padding: 20px 0;
+    text-align: center;
+}
+
+#logo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 20px; /* Отступ снизу */
+}
+
+/* Стили для box.png */
+#boxImg {
+    display: block;
+    margin: 0 auto; /* Центрирование изображения */
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Основной контент */
+main {
+    padding: 20px 0;
+    text-align: center; /* Центрирование текста */
+}
+
+section {
+    background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный тёмный фон для секций */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center; /* Центрирование содержимого секции */
+}
+
+/* Контейнер для кнопок */
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Центрирование кнопок */
+    margin: 20px 0;
+}
+
+/* Стили для кнопок */
+button,
+.btn-link {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 5px; /* Отступы между кнопками */
+}
+
+button:hover,
+.btn-link:hover {
+    background-color: #66BB6A; /* При наведении темнее */
+}
+
+/* Промо жаба внизу */
+.frog-promo {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#promo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto 0;
+}
+
+/* Стили для блока «Личный кабинет» */
+.personal-cabinet {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    margin-bottom: 20px; /* Отступ снизу от блока «Личный кабинет» */
+}
+
+.personal-cabinet h2 {
+    color: #a5d6a7;
+    margin-bottom: 10px;
+}
+
+.personal-cabinet p {
+    color: #a5d6a7;
+    margin-bottom: 20px;
+}
+
+.cabinet-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+}
+
+.cabinet-btn:hover {
+    background-color: #66BB6A;
+}
+
+/* Подвал сайта */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    color: #a5d6a7;
+    background-color: rgba(0, 0, 0, 0.7); /* Тёмный фон для футера */
+    margin-top: 20px; /* Отступ от основного контента */
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    section {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+    button,
+    .btn-link {
+        padding: 10px 15px;
+    }
+}

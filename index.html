@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToadLand</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .download-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .download-button:hover {
+            background-color: #27ae60;
+        }
+        
+        .download-button:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img id="logo" src="logo.png" alt="Логотип ToadLand">
+            <h1>ToadLand</h1>
+            <p>Ква</p>
+            <a href="toadland" class="btn-link">toadland</a>
+        </header>
+
+        <main>
+            <div class="personal-cabinet">
+                <h2>Анкета</h2>
+                <p>Ждем всез на жабосервере</p>
+                <a href="https://t.me/Toadld_bot" class="cabinet-btn">Анкета</a>
+            </div>
+
+            <section class="current-build">
+                <img id="boxImg" src="box.png" alt="Коробка с обновлением">
+                <h2>Актуальная сборка</h2>
+                <p>Готов к прыжку в новое измерение жабьего безумия?</p>
+                <div class="btn-container">
+                    <button class="download-button" onclick="window.location.href='https://disk.yandex.ru/d/6afowpNfkfzXOQ'">
+                        Установить версию прямо сейчас! 🐸
+                    </button>
+                </div>
+            </section>
+
+            <div class="frog-promo">
+                <a href="https://t.me/toadlandl" id="promo" class="clickable-frog">
+                    <img src="promo.png" alt="Промо жаба">
+                </a>
+                <p>Нажми на меня, чтобы перейти в ТГ-канал сервера! Ква!</p>
+                <div id="tgk-message" style="display: none; color: red; margin-top: 10px;">
+                    Наш ТГК ещё не доступен
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>Поддержать (Сбер): </p>
+        <p>ToadLand © 2026</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const frog = document.getElementById('promo');
+            const message = document.getElementById('tgk-message');
+
+            frog.addEventListener('click', function() {
+                window.location.href = 'https://t.me/Toadld_bot';
+                
+                message.style.display = 'block';
+                message.style.opacity = '0';
+                message.style.transition = 'opacity 0.3s ease';
+                setTimeout(() => {
+                    message.style.opacity = '1';
+                }, 10);
+                
+                setTimeout(() => {
+                    message.style.display = 'none';
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+</html>
